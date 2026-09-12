@@ -5,14 +5,14 @@
 
 Overview
 -------------------------------------------------------------------------------
-mSoftGNSS 是一个基于 MATLAB 的开源工具箱，用于对录制的 GNSS 中频（IF）信号进行后处理。
-该工具箱基于 SoftGNSS 接收机架构，在可配置的处理框架下支持 GPS、Galileo、GLONASS 和北斗信号。
-根据各信号已实现的处理能力，提供 CPU/GPU 捕获、数据/导频跟踪、导航电文解码、伪距生成和定位功能。
-工具箱提供通道串行和通道并行两种跟踪模式，每种模式均支持 MATLAB 相关器、SIMD 加速相关器和
-GPU 加速相关器。通道并行跟踪通过跨通道共享 IF 数据缓冲和批量执行相关任务，减少重复数据访问。
-计算密集型相关器由 C++ 和 CUDA C++ 实现，并通过 MEX 接口集成；接收机调度、跟踪环路控制、
-导航解码和定位仍在 MATLAB 中完成。这种功能划分将高层算法开发的便利性与原生代码的计算效率相结合。
-结合现代化信号支持和 LDPC 解码功能，工具箱为 GNSS 算法研究、接收机原型开发以及基于录制 IF 数据的
+mSoftGNSS 是一个基于MATLAB的开源工具箱，用于对录制的GNSS中频（IF）信号进行后处理。
+该工具箱基于SoftGNSS接收机架构，在可配置的处理框架下支持GPS、Galileo、GLONASS和北斗信号。
+根据各信号已实现的处理能力，提供CPU/GPU捕获、数据/导频跟踪、导航电文解码、伪距生成和定位功能。
+工具箱提供通道串行和通道并行两种跟踪模式，每种模式均支持MATLAB相关器、SIMD加速相关器和
+GPU加速相关器。通道并行跟踪通过跨通道共享IF数据缓冲和批量执行相关任务，减少重复数据访问。
+计算密集型相关器由C++和CUDA C++实现，并通过MEX接口集成；接收机调度、跟踪环路控制、
+导航解码和定位仍在MATLAB中完成。这种功能划分将高层算法开发的便利性与原生代码的计算效率相结合。
+结合现代化信号支持和LDPC解码功能，工具箱为GNSS算法研究、接收机原型开发以及基于录制IF数据的
 可重复评估提供了可扩展的平台。
 
 
@@ -67,7 +67,7 @@ Features
     * GLONASS L1OC
     * GLONASS L2OC（仅导频跟踪）
     * GLONASS L3OC
-    * BeiDou B1I/B2I
+    * BeiDou B1I
     * BeiDou B3I
     * BDS-3 B1C (data + pilot)
     * BDS-3 B2a (data + pilot)
@@ -106,11 +106,11 @@ Directory and Files
     ./mGlonass_L1OC           GLONASS L1OC 软件接收机
     ./mGlonass_L2OC           GLONASS L2OC 软件接收机
     ./mGlonass_L3OC           GLONASS L3OC 软件接收机
-    ./mBDS_B1I                北斗 B1I/B2I 软件接收机
-    ./mBDS_B3I                北斗 B3I 软件接收机
-    ./mBDS-3_B1C              北斗三号 B1C 软件接收机
-    ./mBDS-3_B2a              北斗三号 B2a 软件接收机
-    ./mBDS_B2b                北斗 B2b 软件接收机
+    ./mBDS_B1I                北斗B1I软件接收机
+    ./mBDS_B3I                北斗B3I软件接收机
+    ./mBDS-3_B1C              北斗三号B1C软件接收机
+    ./mBDS-3_B2a              北斗三号B2a软件接收机
+    ./mBDS_B2b                北斗B2b软件接收机
 
 每个接收机目录的通用结构
     ./init.m                  接收机启动脚本：设置路径、读取配置、探测原始 IF
